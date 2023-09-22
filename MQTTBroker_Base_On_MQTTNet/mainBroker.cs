@@ -102,20 +102,32 @@ namespace MQTTBroker_Base_On_MQTTNet
 
         private void OpenChildForm(Form childForm)
         {
-            if(currentChildForm != null)
+            string childFormTitle = string.Empty;
+            bool isFinded = false;
+            foreach (Form form in panelDesktop.Controls)
             {
-                //Open only form
-                currentChildForm.Close();
+                if (form.Name.Equals(childForm.Name))
+                {
+                    isFinded = true;
+                    form.BringToFront();
+                    form.Activate();
+                    form.Focus();
+                    childFormTitle = childForm.Text;
+                    break;
+                }
             }
-            currentChildForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            panelDesktop.Controls.Add(childForm);
-            panelDesktop.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
-            lblTitleChildForm.Text = childForm.Text;
+            if (!isFinded)
+            {
+                panelDesktop.Controls.Add(childForm);
+                panelDesktop.Tag = childForm;
+                childForm.TopLevel = false;
+                childForm.FormBorderStyle = FormBorderStyle.None;
+                childForm.Dock = DockStyle.Fill;
+                childForm.BringToFront();
+                childForm.Show();
+                childFormTitle = childForm.Text;
+            }
+            lblTitleChildForm.Text = childFormTitle;
         }
 
         private void ClickEventPictureBox(object sender, EventArgs e)
@@ -147,7 +159,8 @@ namespace MQTTBroker_Base_On_MQTTNet
                 {
                     case "btnDashboard":
                         currentColor = RGBColors.color172;
-                        template = new DashboardForm();
+                        //template = new DashboardForm();
+                        template = new LightMeter.MainForm();
                         break;
                     case "btnOrders":
                         currentColor = RGBColors.color249;
