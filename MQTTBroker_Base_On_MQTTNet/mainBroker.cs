@@ -6,6 +6,7 @@ using System.Diagnostics.Contracts;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,7 @@ namespace MQTTBroker_Base_On_MQTTNet
     //https://rjcodeadvance.com/formulario-modernoiconos-font-awesome-winform-c/
     public partial class mainBroker : Form
     {
+        private int borderSize = 2;
         //UI Fields
         private IconButton currentButn;
         private Panel leftBoarderBtn;
@@ -27,27 +29,52 @@ namespace MQTTBroker_Base_On_MQTTNet
         public mainBroker()
         {
             InitializeComponent();
+            this.Padding = new Padding(borderSize);
+            this.BackColor = Color.FromArgb(98, 102, 244);
+
             leftBoarderBtn = new Panel();
             leftBoarderBtn.Size = new Size(7,60);
             panelMenu.Controls.Add(leftBoarderBtn);
             //Add Event
-            this.btnDashboard.Click += new System.EventHandler(ClickEventButton);
+            this.btnLightMeter.Click += new System.EventHandler(ClickEventButton);
+            this.btnLightMeter.MouseLeave += new System.EventHandler(this.menuMouseLeaveEvent);
+            this.btnLightMeter.MouseMove += new System.Windows.Forms.MouseEventHandler(this.menuMouseMoveEvent);
+
             this.btnOrders.Click += new System.EventHandler(ClickEventButton);
+            this.btnOrders.MouseLeave += new System.EventHandler(this.menuMouseLeaveEvent);
+            this.btnOrders.MouseMove += new System.Windows.Forms.MouseEventHandler(this.menuMouseMoveEvent);
+
             this.btnProducts.Click += new System.EventHandler(ClickEventButton);
+            this.btnProducts.MouseLeave += new System.EventHandler(this.menuMouseLeaveEvent);
+            this.btnProducts.MouseMove += new System.Windows.Forms.MouseEventHandler(this.menuMouseMoveEvent);
+
             this.btnCustomers.Click += new System.EventHandler(ClickEventButton);
+            this.btnCustomers.MouseLeave += new System.EventHandler(this.menuMouseLeaveEvent);
+            this.btnCustomers.MouseMove += new System.Windows.Forms.MouseEventHandler(this.menuMouseMoveEvent);
+
             this.btnMarketing.Click += new System.EventHandler(ClickEventButton);
+            this.btnMarketing.MouseLeave += new System.EventHandler(this.menuMouseLeaveEvent);
+            this.btnMarketing.MouseMove += new System.Windows.Forms.MouseEventHandler(this.menuMouseMoveEvent);
+
             this.btnSetting.Click += new System.EventHandler(ClickEventButton);
+            this.btnSetting.MouseLeave += new System.EventHandler(this.menuMouseLeaveEvent);
+            this.btnSetting.MouseMove += new System.Windows.Forms.MouseEventHandler(this.menuMouseMoveEvent);
+
             this.btnHome.Click += new System.EventHandler(ClickEventButton);
+
+            this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownEvent);
+
             this.btnExit.Click += new System.EventHandler(ClickEventPictureBox);
+            this.btnExit.MouseLeave += new System.EventHandler(this.controlBoxMouseLeaveEvent);
+            this.btnExit.MouseMove += new System.Windows.Forms.MouseEventHandler(this.controlBoxMouseMoveEvent);
+
             this.btnMaximize.Click += new System.EventHandler(ClickEventPictureBox);
+            this.btnMaximize.MouseLeave += new System.EventHandler(this.controlBoxMouseLeaveEvent);
+            this.btnMaximize.MouseMove += new System.Windows.Forms.MouseEventHandler(this.controlBoxMouseMoveEvent);
+
             this.btnMinimize.Click += new System.EventHandler(ClickEventPictureBox);
-            this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(MouseDownEvent);
-            //Form
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
-            this.Text = string.Empty;
-            this.ControlBox = false;
-            this.DoubleBuffered = true;
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea; 
+            this.btnMinimize.MouseLeave += new System.EventHandler(this.controlBoxMouseLeaveEvent);
+            this.btnMinimize.MouseMove += new System.Windows.Forms.MouseEventHandler(this.controlBoxMouseMoveEvent);
         }
 
         //Structs
@@ -62,7 +89,7 @@ namespace MQTTBroker_Base_On_MQTTNet
         }
 
         //Methods
-        private void ActivateButton(object senderBtn, Color CurrentColor)
+        private void ActivateButton(object senderBtn, Color CurrentColor, bool mouseEvent = false)
         { 
             if(senderBtn != null)
             {
@@ -81,9 +108,12 @@ namespace MQTTBroker_Base_On_MQTTNet
                 leftBoarderBtn.Visible = true;
                 leftBoarderBtn.BringToFront();
                 //Icon Title Child Form
-                iconCurrentChildForm.IconChar = currentButn.IconChar;
-                iconCurrentChildForm.IconColor = CurrentColor;
-                iconCurrentChildForm.IconFont = currentButn.IconFont;
+                if (!mouseEvent)
+                {
+                    iconCurrentChildForm.IconChar = currentButn.IconChar;
+                    iconCurrentChildForm.IconColor = CurrentColor;
+                    iconCurrentChildForm.IconFont = currentButn.IconFont;
+                }
             }
         }
 
@@ -106,26 +136,31 @@ namespace MQTTBroker_Base_On_MQTTNet
             bool isFinded = false;
             foreach (Form form in panelDesktop.Controls)
             {
-                if (form.Name.Equals(childForm.Name))
+                if (form.Text.Equals(childForm.Text))
                 {
                     isFinded = true;
+                    childFormTitle = form.Text;
+                    form.TopLevel = false;
                     form.BringToFront();
                     form.Activate();
                     form.Focus();
-                    childFormTitle = childForm.Text;
                     break;
                 }
             }
             if (!isFinded)
             {
-                panelDesktop.Controls.Add(childForm);
-                panelDesktop.Tag = childForm;
-                childForm.TopLevel = false;
+                childFormTitle = childForm.Text;
                 childForm.FormBorderStyle = FormBorderStyle.None;
                 childForm.Dock = DockStyle.Fill;
-                childForm.BringToFront();
+                childForm.TopLevel = false;
                 childForm.Show();
-                childFormTitle = childForm.Text;
+
+                panelDesktop.Tag = childForm.Tag;
+                panelDesktop.Controls.Add(childForm);
+
+                childForm.BringToFront();
+                childForm.Activate();
+                childForm.Focus();
             }
             lblTitleChildForm.Text = childFormTitle;
         }
@@ -157,10 +192,9 @@ namespace MQTTBroker_Base_On_MQTTNet
                 Color currentColor = RGBColors.color172;
                 switch (((IconButton)sender).Name)
                 {
-                    case "btnDashboard":
+                    case "btnLightMeter":
                         currentColor = RGBColors.color172;
-                        //template = new DashboardForm();
-                        template = new LightMeter.MainForm();
+                        template = (new LightMeter.MainForm());
                         break;
                     case "btnOrders":
                         currentColor = RGBColors.color249;
@@ -187,7 +221,11 @@ namespace MQTTBroker_Base_On_MQTTNet
                 if (((IconButton)sender).Name == "btnHome")
                 {
                     //Reset
-                    currentChildForm.Close();
+                    foreach (Form form in panelDesktop.Controls)
+                    {
+                        form.Close();
+                    }
+
                     DisableButton();
                     leftBoarderBtn.Visible = false;
                     iconCurrentChildForm.IconChar = IconChar.Home;
@@ -202,16 +240,16 @@ namespace MQTTBroker_Base_On_MQTTNet
             }
         }
 
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn
-        (
-            int nLeftRect, // x-coordinate of upper-left corner
-            int nTopRect, // y-coordinate of upper-left corner
-            int nRightRect, // x-coordinate of lower-right corner
-            int nBottomRect, // y-coordinate of lower-right corner
-            int nWidthEllipse, // height of ellipse
-            int nHeightEllipse // width of ellipse
-         );
+        //[DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        //private static extern IntPtr CreateRoundRectRgn
+        //(
+        //    int nLeftRect, // x-coordinate of upper-left corner
+        //    int nTopRect, // y-coordinate of upper-left corner
+        //    int nRightRect, // x-coordinate of lower-right corner
+        //    int nBottomRect, // y-coordinate of lower-right corner
+        //    int nWidthEllipse, // height of ellipse
+        //    int nHeightEllipse // width of ellipse
+        // );
 
 
         //Drag Form
@@ -227,6 +265,87 @@ namespace MQTTBroker_Base_On_MQTTNet
         {
             ReleaseCapture();
             SendMessage(this.Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+        }
+        private void controlBoxMouseMoveEvent(object sender, MouseEventArgs e)
+        {
+            IconPictureBox iconBtn = (IconPictureBox)sender;
+            iconBtn.Size = new Size(30, 30);
+        }
+
+        private void controlBoxMouseLeaveEvent(object sender, EventArgs e)
+        {
+            IconPictureBox iconBtn = (IconPictureBox)sender;
+            iconBtn.Size = new Size(28, 28);
+        }
+
+        private void menuMouseMoveEvent(object sender, MouseEventArgs e)
+        {
+            Color currentColor = RGBColors.color172;
+            switch (((IconButton)sender).Name)
+            {
+                case "btnLightMeter":
+                    currentColor = RGBColors.color172;
+                    break;
+                case "btnOrders":
+                    currentColor = RGBColors.color249;
+
+                    break;
+                case "btnProducts":
+                    currentColor = RGBColors.color253;
+                    break;
+                case "btnCustomers":
+                    currentColor = RGBColors.color95;
+                    break;
+                case "btnMarketing":
+                    currentColor = RGBColors.color24988;
+                    break;
+                case "btnSetting":
+                    currentColor = RGBColors.color24;
+                    break;
+            }
+            ActivateButton(sender, currentColor, true);
+        }
+        //Event methods
+        private void menuMouseLeaveEvent(object sender, EventArgs e)
+        {
+            DisableButton();
+        }
+
+        //Event methods
+        private void mainBroker_Resize(object sender, EventArgs e)
+        {
+            AdjustForm();
+        }
+
+        //Private methods
+        private void AdjustForm()
+        {
+            switch (this.WindowState)
+            {
+                case FormWindowState.Normal:
+                    //if (this.Padding.Top != borderSize)
+                    this.Padding = new Padding(borderSize);
+                break; 
+
+                case FormWindowState.Maximized:
+                    this.Padding = new Padding(0, 8, 0, 8);
+                break; 
+
+                case FormWindowState.Minimized:
+                    this.Padding = new Padding(0, 8, 0,8 );
+                break;
+            }
+        }
+
+        //Overridden methods
+        protected override void WndProc(ref Message m)
+        {
+            const int WM_NCCALCSIZE = 0x0083;
+            if (m.Msg == WM_NCCALCSIZE && m.WParam.ToInt32() == 1 )
+            {
+                return;
+            }
+            base.WndProc(ref m);
         }
     }
 }

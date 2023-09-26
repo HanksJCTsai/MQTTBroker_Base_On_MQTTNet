@@ -48,7 +48,8 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "OrdersForm";
-            this.Text = "OrdersForm";
+            this.Tag = "Orders";
+            this.Text = "Orders";
             this.ResumeLayout(false);
             this.PerformLayout();
 

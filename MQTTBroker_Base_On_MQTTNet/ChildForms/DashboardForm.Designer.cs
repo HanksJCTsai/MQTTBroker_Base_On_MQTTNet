@@ -48,6 +48,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DashboardForm";
+            this.Tag = "Dashboard";
             this.Text = "Dashboard";
             this.ResumeLayout(false);
             this.PerformLayout();
