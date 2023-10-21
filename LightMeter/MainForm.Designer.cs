@@ -201,10 +201,10 @@ namespace LightMeter
             this.cboStopBit.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cboStopBit.FormattingEnabled = true;
             this.cboStopBit.IntegralHeight = false;
-            this.cboStopBit.ItemHeight = 23;
+            this.cboStopBit.ItemHeight = 24;
             this.cboStopBit.Location = new System.Drawing.Point(125, 219);
             this.cboStopBit.Name = "cboStopBit";
-            this.cboStopBit.Size = new System.Drawing.Size(150, 29);
+            this.cboStopBit.Size = new System.Drawing.Size(150, 30);
             this.cboStopBit.TabIndex = 21;
             this.cboStopBit.UseSelectable = true;
             // 
@@ -216,7 +216,7 @@ namespace LightMeter
             this.lblStopBit.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStopBit.Location = new System.Drawing.Point(6, 223);
             this.lblStopBit.Name = "lblStopBit";
-            this.lblStopBit.Size = new System.Drawing.Size(102, 22);
+            this.lblStopBit.Size = new System.Drawing.Size(125, 26);
             this.lblStopBit.TabIndex = 20;
             this.lblStopBit.Text = "STOP BIT:";
             // 
@@ -227,10 +227,10 @@ namespace LightMeter
             this.cboParity.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cboParity.FormattingEnabled = true;
             this.cboParity.IntegralHeight = false;
-            this.cboParity.ItemHeight = 23;
+            this.cboParity.ItemHeight = 24;
             this.cboParity.Location = new System.Drawing.Point(125, 172);
             this.cboParity.Name = "cboParity";
-            this.cboParity.Size = new System.Drawing.Size(150, 29);
+            this.cboParity.Size = new System.Drawing.Size(150, 30);
             this.cboParity.TabIndex = 19;
             this.cboParity.UseSelectable = true;
             // 
@@ -242,7 +242,7 @@ namespace LightMeter
             this.lblParity.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblParity.Location = new System.Drawing.Point(6, 176);
             this.lblParity.Name = "lblParity";
-            this.lblParity.Size = new System.Drawing.Size(84, 22);
+            this.lblParity.Size = new System.Drawing.Size(106, 26);
             this.lblParity.TabIndex = 18;
             this.lblParity.Text = "PARITY:";
             // 
@@ -253,10 +253,10 @@ namespace LightMeter
             this.cboDataBits.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cboDataBits.FormattingEnabled = true;
             this.cboDataBits.IntegralHeight = false;
-            this.cboDataBits.ItemHeight = 23;
+            this.cboDataBits.ItemHeight = 24;
             this.cboDataBits.Location = new System.Drawing.Point(125, 125);
             this.cboDataBits.Name = "cboDataBits";
-            this.cboDataBits.Size = new System.Drawing.Size(150, 29);
+            this.cboDataBits.Size = new System.Drawing.Size(150, 30);
             this.cboDataBits.TabIndex = 17;
             this.cboDataBits.UseSelectable = true;
             // 
@@ -268,7 +268,7 @@ namespace LightMeter
             this.lblDataBits.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDataBits.Location = new System.Drawing.Point(6, 129);
             this.lblDataBits.Name = "lblDataBits";
-            this.lblDataBits.Size = new System.Drawing.Size(114, 22);
+            this.lblDataBits.Size = new System.Drawing.Size(140, 26);
             this.lblDataBits.TabIndex = 16;
             this.lblDataBits.Text = "DATA BITS:";
             // 
@@ -279,10 +279,10 @@ namespace LightMeter
             this.cboBaudRate.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cboBaudRate.FormattingEnabled = true;
             this.cboBaudRate.IntegralHeight = false;
-            this.cboBaudRate.ItemHeight = 23;
+            this.cboBaudRate.ItemHeight = 24;
             this.cboBaudRate.Location = new System.Drawing.Point(125, 78);
             this.cboBaudRate.Name = "cboBaudRate";
-            this.cboBaudRate.Size = new System.Drawing.Size(150, 29);
+            this.cboBaudRate.Size = new System.Drawing.Size(150, 30);
             this.cboBaudRate.TabIndex = 15;
             this.cboBaudRate.UseSelectable = true;
             // 
@@ -294,7 +294,7 @@ namespace LightMeter
             this.lblBaudRate.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBaudRate.Location = new System.Drawing.Point(6, 82);
             this.lblBaudRate.Name = "lblBaudRate";
-            this.lblBaudRate.Size = new System.Drawing.Size(125, 22);
+            this.lblBaudRate.Size = new System.Drawing.Size(156, 26);
             this.lblBaudRate.TabIndex = 14;
             this.lblBaudRate.Text = "BAUD RATE:";
             // 
@@ -305,10 +305,10 @@ namespace LightMeter
             this.cboPort.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cboPort.FormattingEnabled = true;
             this.cboPort.IntegralHeight = false;
-            this.cboPort.ItemHeight = 23;
+            this.cboPort.ItemHeight = 24;
             this.cboPort.Location = new System.Drawing.Point(70, 31);
             this.cboPort.Name = "cboPort";
-            this.cboPort.Size = new System.Drawing.Size(205, 29);
+            this.cboPort.Size = new System.Drawing.Size(205, 30);
             this.cboPort.TabIndex = 13;
             this.cboPort.UseSelectable = true;
             // 
@@ -320,7 +320,7 @@ namespace LightMeter
             this.lblPortName.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPortName.Location = new System.Drawing.Point(6, 35);
             this.lblPortName.Name = "lblPortName";
-            this.lblPortName.Size = new System.Drawing.Size(67, 22);
+            this.lblPortName.Size = new System.Drawing.Size(83, 26);
             this.lblPortName.TabIndex = 12;
             this.lblPortName.Text = "PORT:";
             // 
@@ -430,7 +430,7 @@ namespace LightMeter
             this.txtIntervalTime.Location = new System.Drawing.Point(78, 67);
             this.txtIntervalTime.Name = "txtIntervalTime";
             this.txtIntervalTime.ReadOnly = true;
-            this.txtIntervalTime.Size = new System.Drawing.Size(90, 71);
+            this.txtIntervalTime.Size = new System.Drawing.Size(90, 87);
             this.txtIntervalTime.TabIndex = 17;
             this.txtIntervalTime.Text = "10";
             this.txtIntervalTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -443,7 +443,7 @@ namespace LightMeter
             this.lblIntervalTime.Font = new System.Drawing.Font("DS-Digital", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIntervalTime.Location = new System.Drawing.Point(30, 28);
             this.lblIntervalTime.Name = "lblIntervalTime";
-            this.lblIntervalTime.Size = new System.Drawing.Size(186, 30);
+            this.lblIntervalTime.Size = new System.Drawing.Size(224, 36);
             this.lblIntervalTime.TabIndex = 16;
             this.lblIntervalTime.Text = "INTERVAL TIME";
             // 
@@ -488,7 +488,7 @@ namespace LightMeter
             this.lblGRYXY_Y2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGRYXY_Y2.Location = new System.Drawing.Point(410, 209);
             this.lblGRYXY_Y2.Name = "lblGRYXY_Y2";
-            this.lblGRYXY_Y2.Size = new System.Drawing.Size(23, 22);
+            this.lblGRYXY_Y2.Size = new System.Drawing.Size(29, 26);
             this.lblGRYXY_Y2.TabIndex = 48;
             this.lblGRYXY_Y2.Text = "Y";
             // 
@@ -500,7 +500,7 @@ namespace LightMeter
             this.lblGRYXY_X.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGRYXY_X.Location = new System.Drawing.Point(285, 209);
             this.lblGRYXY_X.Name = "lblGRYXY_X";
-            this.lblGRYXY_X.Size = new System.Drawing.Size(23, 22);
+            this.lblGRYXY_X.Size = new System.Drawing.Size(28, 26);
             this.lblGRYXY_X.TabIndex = 47;
             this.lblGRYXY_X.Text = "X";
             // 
@@ -512,7 +512,7 @@ namespace LightMeter
             this.lblGRYXY_Y1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGRYXY_Y1.Location = new System.Drawing.Point(161, 209);
             this.lblGRYXY_Y1.Name = "lblGRYXY_Y1";
-            this.lblGRYXY_Y1.Size = new System.Drawing.Size(23, 22);
+            this.lblGRYXY_Y1.Size = new System.Drawing.Size(29, 26);
             this.lblGRYXY_Y1.TabIndex = 46;
             this.lblGRYXY_Y1.Text = "Y";
             // 
@@ -524,7 +524,7 @@ namespace LightMeter
             this.lblGRXYZ_Z.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGRXYZ_Z.Location = new System.Drawing.Point(410, 137);
             this.lblGRXYZ_Z.Name = "lblGRXYZ_Z";
-            this.lblGRXYZ_Z.Size = new System.Drawing.Size(22, 22);
+            this.lblGRXYZ_Z.Size = new System.Drawing.Size(27, 26);
             this.lblGRXYZ_Z.TabIndex = 45;
             this.lblGRXYZ_Z.Text = "Z";
             // 
@@ -536,7 +536,7 @@ namespace LightMeter
             this.lblGRXYZ_Y.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGRXYZ_Y.Location = new System.Drawing.Point(285, 137);
             this.lblGRXYZ_Y.Name = "lblGRXYZ_Y";
-            this.lblGRXYZ_Y.Size = new System.Drawing.Size(23, 22);
+            this.lblGRXYZ_Y.Size = new System.Drawing.Size(29, 26);
             this.lblGRXYZ_Y.TabIndex = 44;
             this.lblGRXYZ_Y.Text = "Y";
             // 
@@ -548,7 +548,7 @@ namespace LightMeter
             this.lblGRXYZ_X.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGRXYZ_X.Location = new System.Drawing.Point(161, 137);
             this.lblGRXYZ_X.Name = "lblGRXYZ_X";
-            this.lblGRXYZ_X.Size = new System.Drawing.Size(23, 22);
+            this.lblGRXYZ_X.Size = new System.Drawing.Size(28, 26);
             this.lblGRXYZ_X.TabIndex = 37;
             this.lblGRXYZ_X.Text = "X";
             // 
@@ -562,7 +562,7 @@ namespace LightMeter
             this.txtGRYXY_Y2.Location = new System.Drawing.Point(359, 239);
             this.txtGRYXY_Y2.Name = "txtGRYXY_Y2";
             this.txtGRYXY_Y2.ReadOnly = true;
-            this.txtGRYXY_Y2.Size = new System.Drawing.Size(117, 36);
+            this.txtGRYXY_Y2.Size = new System.Drawing.Size(117, 44);
             this.txtGRYXY_Y2.TabIndex = 43;
             // 
             // txtGRYXY_X
@@ -575,7 +575,7 @@ namespace LightMeter
             this.txtGRYXY_X.Location = new System.Drawing.Point(236, 239);
             this.txtGRYXY_X.Name = "txtGRYXY_X";
             this.txtGRYXY_X.ReadOnly = true;
-            this.txtGRYXY_X.Size = new System.Drawing.Size(117, 36);
+            this.txtGRYXY_X.Size = new System.Drawing.Size(117, 44);
             this.txtGRYXY_X.TabIndex = 42;
             // 
             // txtGRYXY_Y1
@@ -588,7 +588,7 @@ namespace LightMeter
             this.txtGRYXY_Y1.Location = new System.Drawing.Point(113, 239);
             this.txtGRYXY_Y1.Name = "txtGRYXY_Y1";
             this.txtGRYXY_Y1.ReadOnly = true;
-            this.txtGRYXY_Y1.Size = new System.Drawing.Size(117, 36);
+            this.txtGRYXY_Y1.Size = new System.Drawing.Size(117, 44);
             this.txtGRYXY_Y1.TabIndex = 41;
             // 
             // txtGRXYZ_Z
@@ -601,7 +601,7 @@ namespace LightMeter
             this.txtGRXYZ_Z.Location = new System.Drawing.Point(359, 165);
             this.txtGRXYZ_Z.Name = "txtGRXYZ_Z";
             this.txtGRXYZ_Z.ReadOnly = true;
-            this.txtGRXYZ_Z.Size = new System.Drawing.Size(117, 36);
+            this.txtGRXYZ_Z.Size = new System.Drawing.Size(117, 44);
             this.txtGRXYZ_Z.TabIndex = 40;
             // 
             // txtGRXYZ_Y
@@ -614,7 +614,7 @@ namespace LightMeter
             this.txtGRXYZ_Y.Location = new System.Drawing.Point(236, 165);
             this.txtGRXYZ_Y.Name = "txtGRXYZ_Y";
             this.txtGRXYZ_Y.ReadOnly = true;
-            this.txtGRXYZ_Y.Size = new System.Drawing.Size(117, 36);
+            this.txtGRXYZ_Y.Size = new System.Drawing.Size(117, 44);
             this.txtGRXYZ_Y.TabIndex = 39;
             // 
             // txtGRXYZ_X
@@ -627,7 +627,7 @@ namespace LightMeter
             this.txtGRXYZ_X.Location = new System.Drawing.Point(113, 165);
             this.txtGRXYZ_X.Name = "txtGRXYZ_X";
             this.txtGRXYZ_X.ReadOnly = true;
-            this.txtGRXYZ_X.Size = new System.Drawing.Size(117, 36);
+            this.txtGRXYZ_X.Size = new System.Drawing.Size(117, 44);
             this.txtGRXYZ_X.TabIndex = 38;
             // 
             // txtGRL
@@ -640,7 +640,7 @@ namespace LightMeter
             this.txtGRL.Location = new System.Drawing.Point(113, 90);
             this.txtGRL.Name = "txtGRL";
             this.txtGRL.ReadOnly = true;
-            this.txtGRL.Size = new System.Drawing.Size(117, 36);
+            this.txtGRL.Size = new System.Drawing.Size(117, 44);
             this.txtGRL.TabIndex = 36;
             // 
             // txtGRCCT
@@ -653,7 +653,7 @@ namespace LightMeter
             this.txtGRCCT.Location = new System.Drawing.Point(113, 24);
             this.txtGRCCT.Name = "txtGRCCT";
             this.txtGRCCT.ReadOnly = true;
-            this.txtGRCCT.Size = new System.Drawing.Size(117, 36);
+            this.txtGRCCT.Size = new System.Drawing.Size(117, 44);
             this.txtGRCCT.TabIndex = 35;
             // 
             // btnSendCMD
@@ -694,7 +694,7 @@ namespace LightMeter
             this.lblCMD.Font = new System.Drawing.Font("Times New Roman", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCMD.Location = new System.Drawing.Point(33, 313);
             this.lblCMD.Name = "lblCMD";
-            this.lblCMD.Size = new System.Drawing.Size(77, 25);
+            this.lblCMD.Size = new System.Drawing.Size(94, 32);
             this.lblCMD.TabIndex = 32;
             this.lblCMD.Text = "CMD:";
             // 
@@ -706,7 +706,7 @@ namespace LightMeter
             this.lblGRYXY.Font = new System.Drawing.Font("Times New Roman", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGRYXY.Location = new System.Drawing.Point(13, 246);
             this.lblGRYXY.Name = "lblGRYXY";
-            this.lblGRYXY.Size = new System.Drawing.Size(97, 25);
+            this.lblGRYXY.Size = new System.Drawing.Size(126, 32);
             this.lblGRYXY.TabIndex = 31;
             this.lblGRYXY.Text = "GRYXY:";
             // 
@@ -718,7 +718,7 @@ namespace LightMeter
             this.lblGRXYZ.Font = new System.Drawing.Font("Times New Roman", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGRXYZ.Location = new System.Drawing.Point(11, 172);
             this.lblGRXYZ.Name = "lblGRXYZ";
-            this.lblGRXYZ.Size = new System.Drawing.Size(99, 25);
+            this.lblGRXYZ.Size = new System.Drawing.Size(126, 32);
             this.lblGRXYZ.TabIndex = 30;
             this.lblGRXYZ.Text = "GRXYZ:";
             // 
@@ -730,7 +730,7 @@ namespace LightMeter
             this.lblGRL.Font = new System.Drawing.Font("Times New Roman", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGRL.Location = new System.Drawing.Point(40, 97);
             this.lblGRL.Name = "lblGRL";
-            this.lblGRL.Size = new System.Drawing.Size(70, 25);
+            this.lblGRL.Size = new System.Drawing.Size(86, 32);
             this.lblGRL.TabIndex = 29;
             this.lblGRL.Text = "GRL:";
             // 
@@ -742,7 +742,7 @@ namespace LightMeter
             this.lblGRCCT.Font = new System.Drawing.Font("Times New Roman", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGRCCT.Location = new System.Drawing.Point(8, 31);
             this.lblGRCCT.Name = "lblGRCCT";
-            this.lblGRCCT.Size = new System.Drawing.Size(102, 25);
+            this.lblGRCCT.Size = new System.Drawing.Size(125, 32);
             this.lblGRCCT.TabIndex = 28;
             this.lblGRCCT.Text = "GRCCT:";
             // 
@@ -784,12 +784,12 @@ namespace LightMeter
             this.txtSendOutCMDLog.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtSendOutCMDLog.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSendOutCMDLog.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(194)))), ((int)(((byte)(14)))));
-            this.txtSendOutCMDLog.Location = new System.Drawing.Point(3, 25);
+            this.txtSendOutCMDLog.Location = new System.Drawing.Point(3, 31);
             this.txtSendOutCMDLog.Multiline = true;
             this.txtSendOutCMDLog.Name = "txtSendOutCMDLog";
             this.txtSendOutCMDLog.ReadOnly = true;
             this.txtSendOutCMDLog.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtSendOutCMDLog.Size = new System.Drawing.Size(504, 214);
+            this.txtSendOutCMDLog.Size = new System.Drawing.Size(504, 208);
             this.txtSendOutCMDLog.TabIndex = 18;
             // 
             // gboxMeterReceive
@@ -812,12 +812,12 @@ namespace LightMeter
             this.txtMsgReceiveLog.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtMsgReceiveLog.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMsgReceiveLog.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(194)))), ((int)(((byte)(14)))));
-            this.txtMsgReceiveLog.Location = new System.Drawing.Point(3, 25);
+            this.txtMsgReceiveLog.Location = new System.Drawing.Point(3, 31);
             this.txtMsgReceiveLog.Multiline = true;
             this.txtMsgReceiveLog.Name = "txtMsgReceiveLog";
             this.txtMsgReceiveLog.ReadOnly = true;
             this.txtMsgReceiveLog.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtMsgReceiveLog.Size = new System.Drawing.Size(500, 214);
+            this.txtMsgReceiveLog.Size = new System.Drawing.Size(500, 208);
             this.txtMsgReceiveLog.TabIndex = 17;
             // 
             // MainForm
