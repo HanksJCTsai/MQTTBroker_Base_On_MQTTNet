@@ -1,0 +1,13 @@
+{
+  "BaudRateList": [ "115200", "38400", "19200", "9600", "2400", "1200", "300" ],
+  "DataBitsList": [ "5", "6", "7", "8" ],
+  "ParityList": [ "None", "Even", "Odd", "Mark", "Space" ],
+  "StopBitList": [ "1", "1.5", "2" ],
+  "SendCMDList": [ "GRCCT", "GRL", "GRXYZ", "GRYXY" ],
+  "Port": "COM1",
+  "BaudRate": "115200",
+  "DataBits": "8",
+  "Parity": "None",
+  "StopBit": "1",
+  "IntervalTime": "10"
+}

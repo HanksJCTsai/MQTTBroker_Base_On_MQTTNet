@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>speedometer.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
@@ -101,6 +104,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="APPConfig\_serial_port_.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -122,10 +126,17 @@
     <None Include="Resources\user2.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\APICommand\APICommand.csproj">
+      <Project>{f601951a-6e7c-4941-8a61-bc7e6ecb2474}</Project>
+      <Name>APICommand</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LightMeter\LightMeter.csproj">
       <Project>{a0721699-9837-4b64-910f-5aae94cae3ac}</Project>
       <Name>LightMeter</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="speedometer.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

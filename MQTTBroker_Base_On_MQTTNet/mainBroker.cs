@@ -17,8 +17,6 @@ using MQTTBroker_Base_On_MQTTNet.ChildForms;
 
 namespace MQTTBroker_Base_On_MQTTNet
 {
-    //https://www.youtube.com/watch?v=5AsJJl7Bhvc
-    //https://rjcodeadvance.com/formulario-modernoiconos-font-awesome-winform-c/
     public partial class mainBroker : Form
     {
         private int borderSize = 2;
@@ -40,25 +38,9 @@ namespace MQTTBroker_Base_On_MQTTNet
             this.btnLightMeter.MouseLeave += new System.EventHandler(this.menuMouseLeaveEvent);
             this.btnLightMeter.MouseMove += new System.Windows.Forms.MouseEventHandler(this.menuMouseMoveEvent);
 
-            this.btnOrders.Click += new System.EventHandler(ClickEventButton);
-            this.btnOrders.MouseLeave += new System.EventHandler(this.menuMouseLeaveEvent);
-            this.btnOrders.MouseMove += new System.Windows.Forms.MouseEventHandler(this.menuMouseMoveEvent);
-
-            this.btnProducts.Click += new System.EventHandler(ClickEventButton);
-            this.btnProducts.MouseLeave += new System.EventHandler(this.menuMouseLeaveEvent);
-            this.btnProducts.MouseMove += new System.Windows.Forms.MouseEventHandler(this.menuMouseMoveEvent);
-
-            this.btnCustomers.Click += new System.EventHandler(ClickEventButton);
-            this.btnCustomers.MouseLeave += new System.EventHandler(this.menuMouseLeaveEvent);
-            this.btnCustomers.MouseMove += new System.Windows.Forms.MouseEventHandler(this.menuMouseMoveEvent);
-
-            this.btnMarketing.Click += new System.EventHandler(ClickEventButton);
-            this.btnMarketing.MouseLeave += new System.EventHandler(this.menuMouseLeaveEvent);
-            this.btnMarketing.MouseMove += new System.Windows.Forms.MouseEventHandler(this.menuMouseMoveEvent);
-
-            this.btnSetting.Click += new System.EventHandler(ClickEventButton);
-            this.btnSetting.MouseLeave += new System.EventHandler(this.menuMouseLeaveEvent);
-            this.btnSetting.MouseMove += new System.Windows.Forms.MouseEventHandler(this.menuMouseMoveEvent);
+            this.btnAPI.Click += new System.EventHandler(ClickEventButton);
+            this.btnAPI.MouseLeave += new System.EventHandler(this.menuMouseLeaveEvent);
+            this.btnAPI.MouseMove += new System.Windows.Forms.MouseEventHandler(this.menuMouseMoveEvent);
 
             this.btnHome.Click += new System.EventHandler(ClickEventButton);
 
@@ -196,25 +178,22 @@ namespace MQTTBroker_Base_On_MQTTNet
                         currentColor = RGBColors.color172;
                         template = (new LightMeter.MainForm());
                         break;
-                    case "btnOrders":
+                    case "btnAPI":
                         currentColor = RGBColors.color249;
-                        template = (new OrdersForm());
+                        template = (new APICommand.MainForm());
                         break;
+
                     case "btnProducts":
                         currentColor = RGBColors.color253;
-                        template = (new DashboardForm());
                         break;
                     case "btnCustomers":
                         currentColor = RGBColors.color95;
-                        template = (new DashboardForm());
                         break;
                     case "btnMarketing":
                         currentColor = RGBColors.color24988;
-                        template = (new DashboardForm());
                         break;
                     case "btnSetting":
                         currentColor = RGBColors.color24;
-                        template = (new DashboardForm());
                         break;
                 }
 
@@ -286,9 +265,8 @@ namespace MQTTBroker_Base_On_MQTTNet
                 case "btnLightMeter":
                     currentColor = RGBColors.color172;
                     break;
-                case "btnOrders":
+                case "btnAPI":
                     currentColor = RGBColors.color249;
-
                     break;
                 case "btnProducts":
                     currentColor = RGBColors.color253;
